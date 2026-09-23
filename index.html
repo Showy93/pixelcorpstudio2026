@@ -1,0 +1,308 @@
+<html lang="pl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pixel Corp Studio — Twórcy gier mobilnych</title>
+<meta name="description" content="Pixel Corp Studio — marka gier mobilnych prowadzona przez Marcin Korycki Usługi Programistyczne. Pierwsza gra: PixelDraw na Androida." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='50' height='50' fill='%2300F0FF'/><rect x='50' y='50' width='50' height='50' fill='%23FF00E5'/></svg>" />
+<style>
+  :root{
+    --cyan:#00F0FF;--magenta:#FF00E5;--bg:#0B0B14;--bg2:#12121F;
+    --card:#161626;--text:#EAEAF2;--muted:#9A9AB0;--border:#23233A;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+  a{color:var(--cyan);text-decoration:none;transition:.2s}
+  a:hover{color:var(--magenta)}
+
+  nav{position:sticky;top:0;z-index:100;background:rgba(11,11,20,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:14px 6%;display:flex;align-items:center;justify-content:space-between}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:20px;letter-spacing:1px}
+  .logo-mark{width:32px;height:32px;background:
+      linear-gradient(135deg,var(--cyan) 0 50%,transparent 50%) top left/50% 50% no-repeat,
+      linear-gradient(135deg,var(--magenta) 0 50%,transparent 50%) bottom right/50% 50% no-repeat,
+      linear-gradient(135deg,var(--cyan) 0 50%,transparent 50%) top right/50% 50% no-repeat,
+      linear-gradient(135deg,var(--magenta) 0 50%,transparent 50%) bottom left/50% 50% no-repeat;border-radius:6px}
+  .logo span:first-of-type{color:#fff}
+  .logo span:last-of-type{color:var(--cyan)}
+  nav ul{display:flex;gap:26px;list-style:none;font-size:15px}
+  nav ul a{color:var(--muted)}
+  nav ul a:hover{color:#fff}
+  @media(max-width:760px){nav ul{display:none}}
+
+  header{padding:120px 6% 100px;text-align:center;background:
+      radial-gradient(ellipse at top, rgba(0,240,255,.12), transparent 55%),
+      radial-gradient(ellipse at bottom right, rgba(255,0,229,.12), transparent 55%)}
+  header h1{font-size:clamp(38px,7vw,72px);font-weight:900;letter-spacing:2px;margin-bottom:16px;background:linear-gradient(90deg,var(--cyan),var(--magenta));-webkit-background-clip:text;background-clip:text;color:transparent}
+  header p.sub{font-size:clamp(16px,2vw,20px);color:var(--muted);max-width:660px;margin:0 auto 36px}
+  .buttons{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .btn{padding:14px 30px;border-radius:10px;font-weight:700;font-size:15px;border:2px solid transparent;cursor:pointer;transition:.25s;display:inline-block}
+  .btn-primary{background:linear-gradient(90deg,var(--cyan),var(--magenta));color:#0B0B14}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,240,255,.35);color:#0B0B14}
+  .btn-outline{border-color:var(--border);color:var(--text)}
+  .btn-outline:hover{border-color:var(--cyan);color:var(--cyan)}
+
+  section{padding:80px 6%;max-width:1200px;margin:0 auto}
+  section h2{font-size:clamp(26px,3.5vw,38px);margin-bottom:14px;font-weight:800}
+  section h2::before{content:"// ";color:var(--magenta);font-weight:900}
+  section .lead{color:var(--muted);margin-bottom:44px;max-width:720px;font-size:16px}
+
+  .about-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
+  .stat{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px;text-align:center;transition:.25s}
+  .stat:hover{border-color:var(--cyan);transform:translateY(-4px)}
+  .stat b{display:block;font-size:36px;background:linear-gradient(90deg,var(--cyan),var(--magenta));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .stat span{color:var(--muted);font-size:14px;letter-spacing:1px;text-transform:uppercase}
+
+  .games{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+  .game{background:var(--card);border:1px solid var(--border);border-radius:18px;overflow:hidden;transition:.25s;display:flex;flex-direction:column}
+  .game:hover{border-color:var(--magenta);transform:translateY(-6px);box-shadow:0 12px 40px rgba(255,0,229,.18)}
+  .game .cover{height:170px;display:flex;align-items:center;justify-content:center;font-size:52px;font-weight:900;letter-spacing:2px}
+  .c1{background:linear-gradient(135deg,#00F0FF,#0057FF)}
+  .c2{background:linear-gradient(135deg,#FF00E5,#7A00FF)}
+  .c3{background:linear-gradient(135deg,#00F0FF,#FF00E5)}
+  .game .info{padding:22px}
+  .game h3{font-size:20px;margin-bottom:8px}
+  .game p{color:var(--muted);font-size:14px;margin-bottom:16px}
+  .tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+  .tag{font-size:11px;text-transform:uppercase;letter-spacing:1px;padding:4px 10px;border-radius:20px;background:rgba(0,240,255,.1);color:var(--cyan);border:1px solid rgba(0,240,255,.3)}
+  .tag-soon{background:rgba(255,0,229,.1);color:var(--magenta);border-color:rgba(255,0,229,.3)}
+
+  .legal-box{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:32px;margin-bottom:22px}
+  .legal-box h3{margin-bottom:12px;color:var(--cyan);font-size:20px}
+  .legal-box p, .legal-box li{color:var(--muted);font-size:14.5px;margin-bottom:10px}
+  .legal-box ul{padding-left:22px;margin-bottom:12px}
+  .legal-box strong{color:var(--text)}
+
+  .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+  .contact-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:26px;text-align:center;transition:.25s}
+  .contact-card:hover{border-color:var(--cyan)}
+  .contact-card .icon{font-size:30px;margin-bottom:10px}
+  .contact-card h4{margin-bottom:6px;font-size:16px}
+  .contact-card p, .contact-card a{color:var(--muted);font-size:14px}
+
+  footer{border-top:1px solid var(--border);padding:40px 6%;text-align:center;color:var(--muted);font-size:13.5px;background:var(--bg2)}
+  footer .flogo{margin-bottom:14px;font-weight:900;letter-spacing:1px;color:#fff;font-size:18px}
+  footer .flogo span{color:var(--cyan)}
+  footer .legal-info{margin:14px auto;max-width:640px;font-size:12.5px;opacity:.85;line-height:1.7}
+  footer .links{margin:14px 0;display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
+  footer .links a{color:var(--muted)}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo"><div class="logo-mark"></div><span>PIXEL</span><span>CORP</span></div>
+  <ul>
+    <li><a href="#about">O nas</a></li>
+    <li><a href="#games">Gry</a></li>
+    <li><a href="#privacy">Prywatność</a></li>
+    <li><a href="#terms">Regulamin</a></li>
+    <li><a href="#contact">Kontakt</a></li>
+  </ul>
+</nav>
+
+<header>
+  <h1>Tworzymy gry mobilne,<br>które wciągają</h1>
+  <p class="sub">Pixel Corp Studio to marka gier mobilnych prowadzona przez Marcina Koryckiego w ramach jednoosobowej działalności gospodarczej. Naszą pierwszą produkcją jest PixelDraw — relaksacyjna gra logiczna na Androida.</p>
+  <div class="buttons">
+    <a href="#games" class="btn btn-primary">Zobacz nasze gry</a>
+    <a href="#contact" class="btn btn-outline">Współpraca</a>
+  </div>
+</header>
+
+<section id="about">
+  <h2>O studiu</h2>
+  <p class="lead">Pixel Corp Studio to marka gier mobilnych prowadzona przez <strong>Marcina Koryckiego</strong> w ramach jednoosobowej działalności gospodarczej <strong>Marcin Korycki Usługi Programistyczne</strong> (NIP: 7272820040), działającej od 2017 roku. Marka Pixel Corp Studio powstała w 2026 roku — pracujemy nad naszą pierwszą grą mobilną, PixelDraw.</p>
+  <!-- Statystyki studia — DO UZUPEŁNIENIA po wydaniu pierwszych gier, odkomentować i uzupełnić realnymi liczbami.
+  <div class="about-grid">
+    <div class="stat"><b>2017</b><span>Rok założenia (JDG)</span></div>
+    <div class="stat"><b>—</b><span>Wydanych gier</span></div>
+    <div class="stat"><b>—</b><span>Pobrań</span></div>
+    <div class="stat"><b>—</b><span>Średnia ocena</span></div>
+  </div>
+  -->
+</section>
+
+<section id="games">
+  <h2>Nasze gry</h2>
+  <p class="lead">Nasza pierwsza gra jest w przygotowaniu.</p>
+  <div class="games">
+    <div class="game">
+      <div class="cover c3">DRAW</div>
+      <div class="info">
+        <h3>PixelDraw</h3>
+        <div class="tags"><span class="tag">Puzzle</span><span class="tag">Relaks</span><span class="tag tag-soon">W przygotowaniu</span></div>
+        <p>Relaksacyjna malowanka pikselowa typu „color by number" — koloruj plansze zgodnie z numerami i odkrywaj gotowe obrazki.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Kolejne gry — DO UZUPEŁNIENIA po wydaniu.
+  <div class="game">
+    <div class="cover c1">NEXUS</div>
+    <div class="info">
+      <h3>Tytuł gry</h3>
+      <div class="tags"><span class="tag">Gatunek</span></div>
+      <p>Opis gry.</p>
+      <a href="#" class="btn btn-outline" style="padding:10px 20px;font-size:14px">Google Play →</a>
+    </div>
+  </div>
+  -->
+</section>
+
+<section id="privacy">
+  <h2>Polityka prywatności</h2>
+  <p class="lead">Ostatnia aktualizacja: 23 września 2026</p>
+
+  <div class="legal-box">
+    <h3>1. Administrator danych</h3>
+    <p>Administratorem danych osobowych w rozumieniu RODO jest:</p>
+    <p><strong>Marcin Korycki</strong>, prowadzący jednoosobową działalność gospodarczą pod firmą <strong>Marcin Korycki Usługi Programistyczne</strong><br>
+    ul. Drewnowska 51/66, 91-002 Łódź, Polska<br>
+    NIP: 7272820040 · REGON: 368656876<br>
+    E-mail: <a href="mailto:pixelcorpstudio2026@gmail.com">pixelcorpstudio2026@gmail.com</a></p>
+    <p>Działalność prowadzi markę handlową <strong>Pixel Corp Studio</strong>, pod którą publikuje gry mobilne w Google Play.</p>
+  </div>
+
+  <div class="legal-box">
+    <h3>2. Jakie dane zbieramy</h3>
+    <ul>
+      <li><strong>Dane techniczne:</strong> model urządzenia, wersja systemu, Advertising ID, język, region.</li>
+      <li><strong>Dane rozgrywki:</strong> postępy, osiągnięcia, statystyki.</li>
+      <li><strong>Dane zakupów:</strong> informacje o transakcjach w aplikacji (obsługiwane przez Google Play).</li>
+      <li><strong>Dane diagnostyczne:</strong> logi błędów i zdarzenia awarii (Firebase Crashlytics/Analytics).</li>
+    </ul>
+  </div>
+
+  <div class="legal-box">
+    <h3>3. Cel i podstawa przetwarzania</h3>
+    <ul>
+      <li>Świadczenie usług (art. 6 ust. 1 lit. b RODO).</li>
+      <li>Analityka i ulepszanie gier (art. 6 ust. 1 lit. f RODO — uzasadniony interes).</li>
+      <li>Reklamy i marketing (art. 6 ust. 1 lit. a RODO — zgoda).</li>
+      <li>Obowiązki prawno-podatkowe (art. 6 ust. 1 lit. c RODO).</li>
+    </ul>
+  </div>
+
+  <div class="legal-box">
+    <h3>4. Odbiorcy danych</h3>
+    <ul>
+      <li><strong>Google LLC</strong> — Google Play Services, Firebase (Analytics), Google AdMob.</li>
+    </ul>
+    <p>Nie sprzedajemy danych osobowych użytkowników.</p>
+  </div>
+
+  <div class="legal-box">
+    <h3>5. Dzieci poniżej 13 roku życia</h3>
+    <p>Nasze gry nie są kierowane do dzieci poniżej 13 lat. Zgłoszenia dotyczące danych dzieci prosimy kierować na <a href="mailto:pixelcorpstudio2026@gmail.com">pixelcorpstudio2026@gmail.com</a>.</p>
+  </div>
+
+  <div class="legal-box">
+    <h3>6. Twoje prawa</h3>
+    <ul>
+      <li>Dostępu do danych, ich sprostowania i usunięcia.</li>
+      <li>Ograniczenia i sprzeciwu wobec przetwarzania.</li>
+      <li>Przenoszenia danych.</li>
+      <li>Wycofania zgody w dowolnym momencie.</li>
+      <li>Skargi do Prezesa UODO.</li>
+    </ul>
+    <p>Kontakt w sprawach RODO: <a href="mailto:pixelcorpstudio2026@gmail.com">pixelcorpstudio2026@gmail.com</a>.</p>
+  </div>
+
+  <div class="legal-box">
+    <h3>7. Bezpieczeństwo i retencja</h3>
+    <p>Dane są szyfrowane (TLS), a dostęp mają wyłącznie upoważnione osoby. Dane przechowujemy przez okres niezbędny do realizacji celów, nie dłużej niż 5 lat od ostatniej aktywności.</p>
+  </div>
+
+  <div class="legal-box">
+    <h3>8. Zmiany polityki</h3>
+    <p>O istotnych zmianach poinformujemy w aplikacji lub na tej stronie.</p>
+  </div>
+</section>
+
+<section id="terms">
+  <h2>Regulamin usługi</h2>
+  <p class="lead">Warunki korzystania z gier Pixel Corp Studio.</p>
+
+  <div class="legal-box">
+    <h3>1. Postanowienia ogólne</h3>
+    <p>Usługi gier mobilnych świadczy <strong>Marcin Korycki</strong>, prowadzący jednoosobową działalność gospodarczą pod firmą <strong>Marcin Korycki Usługi Programistyczne</strong> (dalej „Usługodawca"), działający pod marką <strong>Pixel Corp Studio</strong>. Korzystanie z gier oznacza akceptację niniejszego Regulaminu.</p>
+  </div>
+
+  <div class="legal-box">
+    <h3>2. Licencja</h3>
+    <p>Udzielamy niewyłącznej, nieprzenoszalnej licencji na korzystanie z gry w celach osobistych, niekomercyjnych.</p>
+  </div>
+
+  <div class="legal-box">
+    <h3>3. Zakazane działania</h3>
+    <ul>
+      <li>Modyfikowanie, dekompilowanie gry.</li>
+      <li>Używanie cheatów, botów i exploitów.</li>
+      <li>Obrót kontami i wirtualnymi przedmiotami poza grą.</li>
+    </ul>
+  </div>
+
+  <div class="legal-box">
+    <h3>4. Zakupy w aplikacji</h3>
+    <p>Zakupy obsługiwane są przez Google Play i podlegają jego regulaminowi.</p>
+  </div>
+
+  <div class="legal-box">
+    <h3>5. Odpowiedzialność</h3>
+    <p>Gra dostarczana jest „tak jak jest". Usługodawca nie odpowiada za utratę danych ani przerwy w działaniu.</p>
+  </div>
+
+  <div class="legal-box">
+    <h3>6. Prawo właściwe</h3>
+    <p>Regulamin podlega prawu polskiemu. Spory rozstrzygają sądy właściwe dla miejsca prowadzenia działalności przez Usługodawcę.</p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Kontakt</h2>
+  <p class="lead">Współpraca, wsparcie techniczne, reklamacje — jesteśmy do dyspozycji.</p>
+  <div class="contact-grid">
+    <div class="contact-card">
+      <div class="icon">✉️</div>
+      <h4>Kontakt ogólny</h4>
+      <a href="mailto:pixelcorpstudio2026@gmail.com">pixelcorpstudio2026@gmail.com</a>
+    </div>
+    <div class="contact-card">
+      <div class="icon">🛠️</div>
+      <h4>Wsparcie techniczne</h4>
+      <a href="mailto:pixelcorpstudio2026@gmail.com">pixelcorpstudio2026@gmail.com</a>
+    </div>
+    <div class="contact-card">
+      <div class="icon">🔒</div>
+      <h4>Prywatność / RODO</h4>
+      <a href="mailto:pixelcorpstudio2026@gmail.com">pixelcorpstudio2026@gmail.com</a>
+    </div>
+    <div class="contact-card">
+      <div class="icon">💼</div>
+      <h4>Współpraca / wydawcy</h4>
+      <a href="mailto:pixelcorpstudio2026@gmail.com">pixelcorpstudio2026@gmail.com</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="flogo">PIXEL <span>CORP</span> STUDIO</div>
+  <p>Marka gier mobilnych prowadzona przez Marcin Korycki Usługi Programistyczne · Łódź, Polska</p>
+  <div class="legal-info">
+    <strong>Marcin Korycki Usługi Programistyczne</strong><br>
+    ul. Drewnowska 51/66, 91-002 Łódź<br>
+    NIP: 7272820040 · REGON: 368656876
+  </div>
+  <div class="links">
+    <a href="#about">O nas</a>
+    <a href="#games">Gry</a>
+    <a href="#privacy">Polityka prywatności</a>
+    <a href="#terms">Regulamin</a>
+    <a href="#contact">Kontakt</a>
+  </div>
+  <p>© 2026 Marcin Korycki Usługi Programistyczne · Pixel Corp Studio. Wszelkie prawa zastrzeżone.</p>
+  <p style="margin-top:8px;font-size:12px;opacity:.6">Google Play i logo Google Play są znakami towarowymi Google LLC.</p>
+</footer>
+
+</body>
+</html>
