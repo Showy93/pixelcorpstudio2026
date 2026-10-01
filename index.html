@@ -4,6 +4,11 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Pixel Corp Studio — Twórcy gier mobilnych</title>
+<link rel="canonical" href="https://pixelcorpstudio.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Pixel Corp Studio — Twórcy gier mobilnych" />
+<meta property="og:description" content="Pixel Corp Studio — marka gier mobilnych. Pierwsza gra: PixelDraw na Androida." />
+<meta property="og:url" content="https://pixelcorpstudio.com/" />
 <meta name="description" content="Pixel Corp Studio — marka gier mobilnych prowadzona przez Marcin Korycki Usługi Programistyczne. Pierwsza gra: PixelDraw na Androida." />
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='50' height='50' fill='%2300F0FF'/><rect x='50' y='50' width='50' height='50' fill='%23FF00E5'/></svg>" />
 <style>
@@ -173,23 +178,24 @@
       <li><strong>Dane analityczne (Firebase Analytics):</strong> zdarzenia dotyczące korzystania z gry, opisane poniżej.</li>
     </ul>
     <h4>Zdarzenia analityczne</h4>
-    <p>Zbieramy wyłącznie zdarzenia techniczne i dotyczące rozgrywki, powiązane z pseudonimowym identyfikatorem instalacji. Nie zbieramy imion, nazwisk, adresów e-mail, treści wpisywanych przez użytkownika, lokalizacji, kontaktów ani zdjęć. Zbierane zdarzenia:</p>
+    <p>Zbieramy wyłącznie zdarzenia techniczne i dotyczące rozgrywki, powiązane z pseudonimowym identyfikatorem instalacji. Nie zbieramy imion, nazwisk, adresów e-mail, treści wpisywanych przez użytkownika, dokładnej lokalizacji (GPS), kontaktów ani zdjęć. Zbierane zdarzenia:</p>
     <ul>
       <li><strong>Nawigacja:</strong> wejścia na ekrany aplikacji (wybór poziomu trudności, mapa kategorii, mapa plansz, plansza, sklep, osiągnięcia), czas zaangażowania i sesje.</li>
-      <li><strong>Rozgrywka:</strong> rozpoczęcie, ukończenie, zresetowanie i opuszczenie planszy (z przybliżonym procentem pomalowania i przedziałem czasu spędzonego na planszy), użycie podpowiedzi, odblokowane osiągnięcia.</li>
-      <li><strong>Reklamy:</strong> zdarzenia cyklu życia reklam (załadowanie, wyświetlenie, kliknięcie, zamknięcie, błąd, przyznanie nagrody za reklamę z nagrodą), z informacją o formacie reklamy (baner, pełnoekranowa, z nagrodą) i miejscu jej użycia.</li>
+      <li><strong>Rozgrywka:</strong> rozpoczęcie, ukończenie, zresetowanie i opuszczenie planszy (z przybliżonym procentem pomalowania i przedziałem czasu spędzonego na planszy), użycie podpowiedzi, odblokowane osiągnięcia; zdarzenia zawierają identyfikator planszy, kategorii i poziomu trudności.</li>
+      <li><strong>Reklamy:</strong> zdarzenia cyklu życia reklam (załadowanie, wyświetlenie, kliknięcie, zamknięcie, błąd, przyznanie nagrody za reklamę z nagrodą), z informacją o formacie reklamy (baner, pełnoekranowa, z nagrodą) i miejscu jej użycia; oferta reklamy z nagrodą (np. za podpowiedź lub odblokowanie kategorii) i jej wynik.</li>
       <li><strong>Zakupy:</strong> rozpoczęcie i wynik zakupu w aplikacji (identyfikator produktu i status).</li>
       <li><strong>Ustawienia:</strong> wybrany język i włączenie/wyłączenie muzyki.</li>
     </ul>
     <p><strong>Zgoda:</strong> zbieranie danych analitycznych oraz ładowanie reklam następuje dopiero po rozstrzygnięciu zgody w oknie Google UMP (tam, gdzie jest ono wymagane, np. w UE/EOG). Do swojej decyzji możesz wrócić w każdej chwili: menu „⋮” w aplikacji → „Opcje prywatności”.</p>
     <p>Analityka nie korzysta z identyfikatora reklamowego ani z sygnałów Google do personalizacji reklam (zgody ad_storage, ad_user_data i ad_personalization są wyłączone). Dane analityczne nie służą do reklamowego profilowania użytkowników.</p>
+<p><strong>Dane zbierane automatycznie przez SDK Firebase.</strong> Poza zdarzeniami wymienionymi powyżej SDK Firebase automatycznie rejestruje standardowe zdarzenia i dane techniczne, m.in. pierwsze uruchomienie, aktualizację aplikacji lub systemu, wersję aplikacji oraz model urządzenia i wersję systemu. Google może także wyznaczać przybliżone położenie (kraj, region) na podstawie adresu IP; nie jest to dokładna lokalizacja, a pełny adres IP nie jest przez nas przechowywany w raportach analitycznych.</p>
   </div>
 
   <div class="legal-box">
     <h3>3. Cel i podstawa przetwarzania</h3>
     <ul>
       <li>Świadczenie usług (art. 6 ust. 1 lit. b RODO).</li>
-      <li>Analityka i ulepszanie gier (art. 6 ust. 1 lit. a RODO — zgoda udzielana w oknie Google UMP, tam gdzie jest ono wymagane; poza takimi regionami art. 6 ust. 1 lit. f RODO — uzasadniony interes).</li>
+      <li>Analityka i ulepszanie gier (art. 6 ust. 1 lit. a RODO — zgoda udzielana w oknie Google UMP, tam gdzie jest ono wymagane; poza takimi regionami art. 6 ust. 1 lit. f RODO — uzasadniony interes). W przypadku dziecka poniżej 16 lat zgoda na analitykę wymaga potwierdzenia przez rodzica lub opiekuna prawnego (art. 8 RODO); do czasu jej uzyskania — o ile zgoda jest wymagana — analityka nie jest włączana.</li>
       <li>Reklamy i marketing (art. 6 ust. 1 lit. a RODO — zgoda; wobec dzieci poniżej 16 lat wymagana jest zgoda rodzica lub opiekuna prawnego, zgodnie z art. 8 RODO).</li>
       <li>Obowiązki prawno-podatkowe (art. 6 ust. 1 lit. c RODO).</li>
     </ul>
@@ -198,9 +204,10 @@
   <div class="legal-box">
     <h3>4. Odbiorcy danych</h3>
     <ul>
-      <li><strong>Google LLC</strong> — Google Play Services, Firebase (Analytics), Google AdMob. Wobec użytkowników rozpoznanych jako dzieci reklamy AdMob są wyświetlane wyłącznie w trybie niespersonalizowanym (child-directed treatment), bez remarketingu i profilowania.</li>
+      <li><strong>Google LLC</strong> — Google Play Services, Firebase (Analytics), Google AdMob. Wobec użytkowników rozpoznanych jako dzieci reklamy AdMob są wyświetlane wyłącznie w trybie niespersonalizowanym (child-directed treatment), bez remarketingu i profilowania. Polityka prywatności Google: <a href="https://policies.google.com/privacy" rel="noopener">policies.google.com/privacy</a>.</li>
     </ul>
     <p>Nie sprzedajemy danych osobowych użytkowników.</p>
+<p><strong>Przekazywanie danych poza EOG.</strong> Google LLC ma siedzibę w USA, dlatego dane przetwarzane przez Firebase i AdMob mogą być przekazywane do USA. Odbywa się to na podstawie decyzji Komisji Europejskiej o odpowiednim stopniu ochrony (EU-US Data Privacy Framework — o ile Google LLC jest uczestnikiem programu) lub standardowych klauzul umownych (art. 44–46 RODO).</p>
   </div>
 
   <div class="legal-box">
@@ -221,7 +228,7 @@
       <li>Dostępu do danych, ich sprostowania i usunięcia.</li>
       <li>Ograniczenia i sprzeciwu wobec przetwarzania.</li>
       <li>Przenoszenia danych.</li>
-      <li>Wycofania zgody w dowolnym momencie.</li>
+      <li>Wycofania zgody w dowolnym momencie — w aplikacji: menu „⋮” → „Opcje prywatności” (o ile jest dostępne w Twoim regionie), lub e-mailem; wycofanie nie wpływa na zgodność z prawem przetwarzania sprzed wycofania.</li>
       <li>Skargi do Prezesa UODO.</li>
     </ul>
     <p>Kontakt w sprawach RODO: <a href="mailto:contact@pixelcorpstudio.com">contact@pixelcorpstudio.com</a>.</p>
@@ -229,7 +236,7 @@
 
   <div class="legal-box">
     <h3>7. Bezpieczeństwo i retencja</h3>
-    <p>Dane są szyfrowane (TLS), a dostęp mają wyłącznie upoważnione osoby. Dane przechowujemy przez okres niezbędny do realizacji celów, nie dłużej niż 5 lat od ostatniej aktywności; zdarzenia analityczne w Firebase są przechowywane przez okres retencji ustawiony w konsoli Firebase (maksymalnie 14 miesięcy), po czym są automatycznie usuwane.</p>
+    <p>Dane są szyfrowane (TLS), a dostęp mają wyłącznie upoważnione osoby. Dane przechowujemy przez okres niezbędny do realizacji celów, nie dłużej niż 5 lat od ostatniej aktywności; zdarzenia analityczne w Firebase są przechowywane przez okres retencji ustawiony w konsoli Firebase (nie dłużej niż 14 miesięcy), po czym są automatycznie usuwane.</p>
   </div>
 
   <div class="legal-box">
@@ -264,6 +271,7 @@
   <div class="legal-box">
     <h3>4. Zakupy w aplikacji</h3>
     <p>Zakupy obsługiwane są przez Google Play i podlegają jego regulaminowi.</p>
+    <p>Konsument ma prawo odstąpić od umowy zawartej na odległość w terminie 14 dni, jednak w przypadku treści cyfrowych dostarczanych w grze (np. płatnych funkcji lub pakietów podpowiedzi) prawo to wygasa z chwilą rozpoczęcia ich dostarczania, jeżeli konsument wyraził na to zgodę i został poinformowany o utracie prawa odstąpienia (art. 38 pkt 13 ustawy o prawach konsumenta). Zasady zwrotów w Google Play określa jego regulamin.</p>
   </div>
 
   <div class="legal-box">
@@ -272,7 +280,12 @@
   </div>
 
   <div class="legal-box">
-    <h3>6. Prawo właściwe</h3>
+    <h3>6. Reklamacje</h3>
+    <p>Reklamacje dotyczące działania gry lub zakupów w aplikacji można składać e-mailem na adres <a href="mailto:contact@pixelcorpstudio.com">contact@pixelcorpstudio.com</a>, podając opis problemu, model urządzenia i wersję aplikacji. Odpowiadamy w terminie 14 dni od otrzymania reklamacji. Przepisy o ochronie konsumentów, w tym o rękojmi za treści cyfrowe, pozostają nienaruszone.</p>
+  </div>
+
+  <div class="legal-box">
+    <h3>7. Prawo właściwe</h3>
     <p>Regulamin podlega prawu polskiemu. Spory rozstrzygają sądy właściwe dla miejsca prowadzenia działalności przez Usługodawcę.</p>
   </div>
 </section>
