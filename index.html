@@ -152,7 +152,7 @@
 
 <section id="privacy">
   <h2>Polityka prywatności</h2>
-  <p class="lead">Ostatnia aktualizacja: 23 września 2026</p>
+  <p class="lead">Ostatnia aktualizacja: 1 października 2026</p>
 
   <div class="legal-box">
     <h3>1. Administrator danych</h3>
@@ -167,11 +167,21 @@
   <div class="legal-box">
     <h3>2. Jakie dane zbieramy</h3>
     <ul>
-      <li><strong>Dane techniczne:</strong> model urządzenia, wersja systemu, Advertising ID, język, region. Dla ruchu rozpoznanego jako dziecięcy Advertising ID nie jest wykorzystywany do profilowania ani remarketingu.</li>
-      <li><strong>Dane rozgrywki:</strong> postępy, osiągnięcia, statystyki.</li>
-      <li><strong>Dane zakupów:</strong> informacje o transakcjach w aplikacji (obsługiwane przez Google Play).</li>
-      <li><strong>Dane diagnostyczne:</strong> logi błędów i zdarzenia awarii (Firebase Crashlytics/Analytics).</li>
+      <li><strong>Dane techniczne:</strong> model urządzenia, wersja systemu, język, region oraz pseudonimowy identyfikator instalacji aplikacji (Firebase app instance ID). Identyfikator reklamowy (Advertising ID) nie jest wykorzystywany przez analitykę ani do personalizacji reklam, remarketingu i profilowania.</li>
+      <li><strong>Dane rozgrywki:</strong> postępy, ukończone plansze i osiągnięcia — zapisywane lokalnie na urządzeniu.</li>
+      <li><strong>Dane zakupów:</strong> informacje o transakcjach w aplikacji (obsługiwane przez Google Play); otrzymujemy wyłącznie informację o statusie zakupu danego produktu, bez danych płatniczych.</li>
+      <li><strong>Dane analityczne (Firebase Analytics):</strong> zdarzenia dotyczące korzystania z gry, opisane poniżej.</li>
     </ul>
+    <h4>Zdarzenia analityczne</h4>
+    <p>Zbieramy wyłącznie zdarzenia techniczne i dotyczące rozgrywki, powiązane z pseudonimowym identyfikatorem instalacji. Nie zbieramy imion, nazwisk, adresów e-mail, treści wpisywanych przez użytkownika, lokalizacji, kontaktów ani zdjęć. Zbierane zdarzenia:</p>
+    <ul>
+      <li><strong>Nawigacja:</strong> wejścia na ekrany aplikacji (wybór poziomu trudności, mapa kategorii, mapa plansz, plansza, sklep, osiągnięcia), czas zaangażowania i sesje.</li>
+      <li><strong>Rozgrywka:</strong> rozpoczęcie, ukończenie, zresetowanie i opuszczenie planszy (z przybliżonym procentem pomalowania i przedziałem czasu spędzonego na planszy), użycie podpowiedzi, odblokowane osiągnięcia.</li>
+      <li><strong>Reklamy:</strong> zdarzenia cyklu życia reklam (załadowanie, wyświetlenie, kliknięcie, zamknięcie, błąd, przyznanie nagrody za reklamę z nagrodą), z informacją o formacie reklamy (baner, pełnoekranowa, z nagrodą) i miejscu jej użycia.</li>
+      <li><strong>Zakupy:</strong> rozpoczęcie i wynik zakupu w aplikacji (identyfikator produktu i status).</li>
+      <li><strong>Ustawienia:</strong> wybrany język i włączenie/wyłączenie muzyki.</li>
+    </ul>
+    <p>Analityka nie korzysta z identyfikatora reklamowego ani z sygnałów Google do personalizacji reklam (zgody ad_storage, ad_user_data i ad_personalization są wyłączone). Dane analityczne nie służą do reklamowego profilowania użytkowników.</p>
   </div>
 
   <div class="legal-box">
@@ -218,7 +228,7 @@
 
   <div class="legal-box">
     <h3>7. Bezpieczeństwo i retencja</h3>
-    <p>Dane są szyfrowane (TLS), a dostęp mają wyłącznie upoważnione osoby. Dane przechowujemy przez okres niezbędny do realizacji celów, nie dłużej niż 5 lat od ostatniej aktywności.</p>
+    <p>Dane są szyfrowane (TLS), a dostęp mają wyłącznie upoważnione osoby. Dane przechowujemy przez okres niezbędny do realizacji celów, nie dłużej niż 5 lat od ostatniej aktywności; zdarzenia analityczne w Firebase są przechowywane przez okres retencji ustawiony w konsoli Firebase (maksymalnie 14 miesięcy), po czym są automatycznie usuwane.</p>
   </div>
 
   <div class="legal-box">
@@ -245,7 +255,7 @@
     <h3>3. Zakazane działania</h3>
     <ul>
       <li>Modyfikowanie, dekompilowanie gry.</li>
-      <li>Używanie cheatów, botów i exploitów.</li>
+      <li>Używanie botów i exploitów oraz nieautoryzowanych modyfikacji gry. Funkcje oferowane w grze (w tym płatny „Tryb Cheat”) są dozwolone.</li>
       <li>Obrót kontami i wirtualnymi przedmiotami poza grą.</li>
     </ul>
   </div>
