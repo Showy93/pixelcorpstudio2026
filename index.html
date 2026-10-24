@@ -17,6 +17,21 @@
 <meta name="description" content="Pixel Corp Studio — a mobile game brand run by Marcin Korycki Usługi Programistyczne. First game: PixelDraw: Color by Number for Android." />
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='50' height='50' fill='%2300F0FF'/><rect x='50' y='50' width='50' height='50' fill='%23FF00E5'/></svg>" />
 <link rel="stylesheet" href="/style.css" />
+<script>
+(function(){
+  var KEY='pcs-lang';
+  function get(){try{return localStorage.getItem(KEY)}catch(e){return null}}
+  function set(v){try{localStorage.setItem(KEY,v)}catch(e){}}
+  var pref=get();
+  var nav=(navigator.languages&&navigator.languages[0])||navigator.language||'';
+  var wantPl=pref?pref==='pl':/^pl\b/i.test(nav);
+  if(wantPl)location.replace('/pl/'+location.search+location.hash);
+  document.addEventListener('DOMContentLoaded',function(){
+    var a=document.querySelector('.lang a');
+    if(a)a.addEventListener('click',function(){set(a.getAttribute('hreflang'))});
+  });
+})();
+</script>
 </head>
 <body>
 
