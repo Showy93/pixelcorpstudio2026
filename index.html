@@ -1,318 +1,238 @@
-<html lang="pl">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta name="google-site-verification" content="8522fjta0KtmAq6tlZYOzUPlFx3F5fHoXZ2V8XUHtcg" />
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Pixel Corp Studio — Twórcy gier mobilnych</title>
+<title>Pixel Corp Studio — Mobile Game Developers</title>
 <link rel="canonical" href="https://pixelcorpstudio.com/" />
+<link rel="alternate" hreflang="en" href="https://pixelcorpstudio.com/" />
+<link rel="alternate" hreflang="pl" href="https://pixelcorpstudio.com/pl/" />
+<link rel="alternate" hreflang="x-default" href="https://pixelcorpstudio.com/" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Pixel Corp Studio — Twórcy gier mobilnych" />
-<meta property="og:description" content="Pixel Corp Studio — marka gier mobilnych. Pierwsza gra: PixelDraw na Androida." />
+<meta property="og:title" content="Pixel Corp Studio — Mobile Game Developers" />
+<meta property="og:description" content="Pixel Corp Studio — a mobile game brand run by Marcin Korycki Usługi Programistyczne. First game: PixelDraw: Color by Number for Android." />
 <meta property="og:url" content="https://pixelcorpstudio.com/" />
-<meta name="description" content="Pixel Corp Studio — marka gier mobilnych prowadzona przez Marcin Korycki Usługi Programistyczne. Pierwsza gra: PixelDraw na Androida." />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Pixel Corp Studio — a mobile game brand run by Marcin Korycki Usługi Programistyczne. First game: PixelDraw: Color by Number for Android." />
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='50' height='50' fill='%2300F0FF'/><rect x='50' y='50' width='50' height='50' fill='%23FF00E5'/></svg>" />
-<style>
-  :root{
-    --cyan:#00F0FF;--magenta:#FF00E5;--bg:#0B0B14;--bg2:#12121F;
-    --card:#161626;--text:#EAEAF2;--muted:#9A9AB0;--border:#23233A;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
-  a{color:var(--cyan);text-decoration:none;transition:.2s}
-  a:hover{color:var(--magenta)}
-
-  nav{position:sticky;top:0;z-index:100;background:rgba(11,11,20,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:14px 6%;display:flex;align-items:center;justify-content:space-between}
-  .logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:20px;letter-spacing:1px}
-  .logo-mark{width:32px;height:32px;background:
-      linear-gradient(135deg,var(--cyan) 0 50%,transparent 50%) top left/50% 50% no-repeat,
-      linear-gradient(135deg,var(--magenta) 0 50%,transparent 50%) bottom right/50% 50% no-repeat,
-      linear-gradient(135deg,var(--cyan) 0 50%,transparent 50%) top right/50% 50% no-repeat,
-      linear-gradient(135deg,var(--magenta) 0 50%,transparent 50%) bottom left/50% 50% no-repeat;border-radius:6px}
-  .logo span:first-of-type{color:#fff}
-  .logo span:last-of-type{color:var(--cyan)}
-  nav ul{display:flex;gap:26px;list-style:none;font-size:15px}
-  nav ul a{color:var(--muted)}
-  nav ul a:hover{color:#fff}
-  @media(max-width:760px){nav ul{display:none}}
-
-  header{padding:120px 6% 100px;text-align:center;background:
-      radial-gradient(ellipse at top, rgba(0,240,255,.12), transparent 55%),
-      radial-gradient(ellipse at bottom right, rgba(255,0,229,.12), transparent 55%)}
-  header h1{font-size:clamp(38px,7vw,72px);font-weight:900;letter-spacing:2px;margin-bottom:16px;background:linear-gradient(90deg,var(--cyan),var(--magenta));-webkit-background-clip:text;background-clip:text;color:transparent}
-  header p.sub{font-size:clamp(16px,2vw,20px);color:var(--muted);max-width:660px;margin:0 auto 36px}
-  .buttons{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-  .btn{padding:14px 30px;border-radius:10px;font-weight:700;font-size:15px;border:2px solid transparent;cursor:pointer;transition:.25s;display:inline-block}
-  .btn-primary{background:linear-gradient(90deg,var(--cyan),var(--magenta));color:#0B0B14}
-  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,240,255,.35);color:#0B0B14}
-  .btn-outline{border-color:var(--border);color:var(--text)}
-  .btn-outline:hover{border-color:var(--cyan);color:var(--cyan)}
-
-  section{padding:80px 6%;max-width:1200px;margin:0 auto}
-  section h2{font-size:clamp(26px,3.5vw,38px);margin-bottom:14px;font-weight:800}
-  section h2::before{content:"// ";color:var(--magenta);font-weight:900}
-  section .lead{color:var(--muted);margin-bottom:44px;max-width:720px;font-size:16px}
-
-  .about-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
-  .stat{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px;text-align:center;transition:.25s}
-  .stat:hover{border-color:var(--cyan);transform:translateY(-4px)}
-  .stat b{display:block;font-size:36px;background:linear-gradient(90deg,var(--cyan),var(--magenta));-webkit-background-clip:text;background-clip:text;color:transparent}
-  .stat span{color:var(--muted);font-size:14px;letter-spacing:1px;text-transform:uppercase}
-
-  .games{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
-  .game{background:var(--card);border:1px solid var(--border);border-radius:18px;overflow:hidden;transition:.25s;display:flex;flex-direction:column}
-  .game:hover{border-color:var(--magenta);transform:translateY(-6px);box-shadow:0 12px 40px rgba(255,0,229,.18)}
-  .game .cover{height:170px;display:flex;align-items:center;justify-content:center;font-size:52px;font-weight:900;letter-spacing:2px}
-  .c1{background:linear-gradient(135deg,#00F0FF,#0057FF)}
-  .c2{background:linear-gradient(135deg,#FF00E5,#7A00FF)}
-  .c3{background:linear-gradient(135deg,#00F0FF,#FF00E5)}
-  .game .info{padding:22px}
-  .game h3{font-size:20px;margin-bottom:8px}
-  .game p{color:var(--muted);font-size:14px;margin-bottom:16px}
-  .tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
-  .tag{font-size:11px;text-transform:uppercase;letter-spacing:1px;padding:4px 10px;border-radius:20px;background:rgba(0,240,255,.1);color:var(--cyan);border:1px solid rgba(0,240,255,.3)}
-  .tag-soon{background:rgba(255,0,229,.1);color:var(--magenta);border-color:rgba(255,0,229,.3)}
-
-  .legal-box{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:32px;margin-bottom:22px}
-  .legal-box h3{margin-bottom:12px;color:var(--cyan);font-size:20px}
-  .legal-box p, .legal-box li{color:var(--muted);font-size:14.5px;margin-bottom:10px}
-  .legal-box ul{padding-left:22px;margin-bottom:12px}
-  .legal-box strong{color:var(--text)}
-
-  .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
-  .contact-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:26px;text-align:center;transition:.25s}
-  .contact-card:hover{border-color:var(--cyan)}
-  .contact-card .icon{font-size:30px;margin-bottom:10px}
-  .contact-card h4{margin-bottom:6px;font-size:16px}
-  .contact-card p, .contact-card a{color:var(--muted);font-size:14px}
-
-  footer{border-top:1px solid var(--border);padding:40px 6%;text-align:center;color:var(--muted);font-size:13.5px;background:var(--bg2)}
-  footer .flogo{margin-bottom:14px;font-weight:900;letter-spacing:1px;color:#fff;font-size:18px}
-  footer .flogo span{color:var(--cyan)}
-  footer .legal-info{margin:14px auto;max-width:640px;font-size:12.5px;opacity:.85;line-height:1.7}
-  footer .links{margin:14px 0;display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
-  footer .links a{color:var(--muted)}
-</style>
+<link rel="stylesheet" href="/style.css" />
 </head>
 <body>
 
 <nav>
-  <div class="logo"><div class="logo-mark"></div><span>PIXEL</span><span>CORP</span></div>
+  <a class="logo" href="/"><div class="logo-mark"></div><span>PIXEL</span><span>CORP</span></a>
+  <div class="nav-right">
   <ul>
-    <li><a href="#about">O nas</a></li>
-    <li><a href="#games">Gry</a></li>
-    <li><a href="#privacy">Prywatność</a></li>
-    <li><a href="#terms">Regulamin</a></li>
-    <li><a href="#contact">Kontakt</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#games">Games</a></li>
+    <li><a href="#privacy">Privacy</a></li>
+    <li><a href="#terms">Terms</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ul>
+  <div class="lang" aria-label="Language"><span aria-current="true">EN</span><a href="/pl/" hreflang="pl" lang="pl">PL</a></div>
+  </div>
 </nav>
 
 <header>
-  <h1>Tworzymy gry mobilne,<br>które wciągają</h1>
-  <p class="sub">Pixel Corp Studio to marka gier mobilnych prowadzona przez Marcina Koryckiego w ramach jednoosobowej działalności gospodarczej. Naszą pierwszą produkcją jest PixelDraw — relaksacyjna gra logiczna na Androida.</p>
+  <h1>We make mobile games<br>you can't put down</h1>
+  <p class="sub">Pixel Corp Studio is a mobile game brand run by Marcin Korycki as a sole proprietorship. Our first title is PixelDraw — a relaxing puzzle game for Android.</p>
   <div class="buttons">
-    <a href="#games" class="btn btn-primary">Zobacz nasze gry</a>
-    <a href="#contact" class="btn btn-outline">Współpraca</a>
+    <a href="#games" class="btn btn-primary">See our games</a>
+    <a href="#contact" class="btn btn-outline">Work with us</a>
   </div>
 </header>
 
 <section id="about">
-  <h2>O studiu</h2>
-  <p class="lead">Pixel Corp Studio to marka gier mobilnych prowadzona przez <strong>Marcina Koryckiego</strong> w ramach jednoosobowej działalności gospodarczej <strong>Marcin Korycki Usługi Programistyczne</strong> (NIP: 7272820040), działającej od 2017 roku. Marka Pixel Corp Studio powstała w 2026 roku — nasza pierwsza gra mobilna, PixelDraw, jest już dostępna w Google Play.</p>
-  <!-- Statystyki studia — DO UZUPEŁNIENIA po wydaniu pierwszych gier, odkomentować i uzupełnić realnymi liczbami.
-  <div class="about-grid">
-    <div class="stat"><b>2017</b><span>Rok założenia (JDG)</span></div>
-    <div class="stat"><b>—</b><span>Wydanych gier</span></div>
-    <div class="stat"><b>—</b><span>Pobrań</span></div>
-    <div class="stat"><b>—</b><span>Średnia ocena</span></div>
-  </div>
-  -->
+  <h2>About the studio</h2>
+  <p class="lead">Pixel Corp Studio is a mobile game brand run by <strong>Marcin Korycki</strong> as a sole proprietorship, <strong>Marcin Korycki Usługi Programistyczne</strong> (NIP: 7272820040), in business since 2017. The Pixel Corp Studio brand was created in 2026 — our first mobile game, PixelDraw, is now available on Google Play.</p>
 </section>
 
 <section id="games">
-  <h2>Nasze gry</h2>
-  <p class="lead">Nasza pierwsza gra jest już dostępna w Google Play.</p>
-  <div class="games">
-    <div class="game">
-      <div class="cover c3">DRAW</div>
-      <div class="info">
-        <h3>PixelDraw</h3>
-        <div class="tags"><span class="tag">Puzzle</span><span class="tag">Relaks</span><span class="tag">Android</span></div>
-        <p>Relaksacyjna malowanka pikselowa typu „color by number" — koloruj plansze zgodnie z numerami i odkrywaj gotowe obrazki.</p>
-        <a href="https://play.google.com/store/apps/details?id=com.pixelcorpstudio.pixeldraw" class="btn btn-outline" style="padding:10px 20px;font-size:14px" target="_blank" rel="noopener">Google Play →</a>
-      </div>
+  <h2>Our games</h2>
+  <p class="lead">Our first game is now available on Google Play.</p>
+  <div class="feature">
+    <div>
+      <img class="ico" src="/img/icon.webp" alt="" width="64" height="64">
+      <h3>PixelDraw: <span class="grad">Color by Number</span></h3>
+      <p class="desc">A calm puzzle game for Android. Paint the squares by number and a pixel-art picture appears.</p>
+      <ul>
+        <li>Tap a square or drag your finger to paint many at once</li>
+        <li>Two difficulty levels, from small pictures to huge, detailed boards</li>
+        <li>Free to play (with ads), works offline</li>
+      </ul>
+      <a href="https://play.google.com/store/apps/details?id=com.pixelcorpstudio.pixeldraw" class="btn btn-primary" target="_blank" rel="noopener">Get it on Google Play</a>
+    </div>
+    <div class="phones">
+      <div class="phone a"><img src="/img/painting.webp" alt="PixelDraw gameplay while painting a picture" width="540" height="1050"></div>
+      <div class="phone b"><img src="/img/treehouse.webp" alt="A finished treehouse picture in PixelDraw" width="540" height="1050"></div>
     </div>
   </div>
-  <!-- Kolejne gry — DO UZUPEŁNIENIA po wydaniu.
-  <div class="game">
-    <div class="cover c1">NEXUS</div>
-    <div class="info">
-      <h3>Tytuł gry</h3>
-      <div class="tags"><span class="tag">Gatunek</span></div>
-      <p>Opis gry.</p>
-      <a href="#" class="btn btn-outline" style="padding:10px 20px;font-size:14px">Google Play →</a>
-    </div>
+  <div class="gal">
+    <figure><img src="/img/candy-shop.webp" alt="The Candy Shop picture in PixelDraw" width="540" height="386" loading="lazy"><figcaption>Candy Shop</figcaption></figure>
+    <figure><img src="/img/bookshop.webp" alt="The Magic Bookshop picture in PixelDraw" width="540" height="386" loading="lazy"><figcaption>Magic Bookshop</figcaption></figure>
+    <figure><img src="/img/lighthouse.webp" alt="The Lighthouse picture in PixelDraw" width="540" height="386" loading="lazy"><figcaption>Lighthouse</figcaption></figure>
+    <figure><img src="/img/carousel.webp" alt="The Carousel Horses picture in PixelDraw" width="540" height="386" loading="lazy"><figcaption>Carousel Horses</figcaption></figure>
   </div>
-  -->
 </section>
 
 <section id="privacy">
-  <h2>Polityka prywatności</h2>
-  <p class="lead">Ostatnia aktualizacja: 3 października 2026</p>
+  <h2>Privacy Policy</h2>
+  <p class="lead">Last updated: 3 October 2026</p>
 
   <div class="legal-box">
-    <h3>1. Administrator danych</h3>
-    <p>Administratorem danych osobowych w rozumieniu RODO jest:</p>
-    <p><strong>Marcin Korycki</strong>, prowadzący jednoosobową działalność gospodarczą pod firmą <strong>Marcin Korycki Usługi Programistyczne</strong><br>
-    ul. Drewnowska 51/66, 91-002 Łódź, Polska<br>
+    <h3>1. Data controller</h3>
+    <p>The controller of personal data within the meaning of the GDPR is:</p>
+    <p><strong>Marcin Korycki</strong>, running a sole proprietorship under the business name <strong>Marcin Korycki Usługi Programistyczne</strong><br>
+    ul. Drewnowska 51/66, 91-002 Łódź, Poland<br>
     NIP: 7272820040 · REGON: 368656876<br>
-    E-mail: <a href="mailto:contact@pixelcorpstudio.com">contact@pixelcorpstudio.com</a></p>
-    <p>Działalność prowadzi markę handlową <strong>Pixel Corp Studio</strong>, pod którą publikuje gry mobilne w Google Play.</p>
+    Email: <a href="mailto:contact@pixelcorpstudio.com">contact@pixelcorpstudio.com</a></p>
+    <p>The business operates the trade brand <strong>Pixel Corp Studio</strong>, under which it publishes mobile games on Google Play.</p>
   </div>
 
   <div class="legal-box">
-    <h3>2. Jakie dane zbieramy</h3>
+    <h3>2. What data we collect</h3>
     <ul>
-      <li><strong>Dane techniczne:</strong> model urządzenia, wersja systemu, język, region oraz pseudonimowy identyfikator instalacji aplikacji (Firebase app instance ID). Identyfikator reklamowy (Advertising ID) nie jest wykorzystywany przez analitykę ani do personalizacji reklam, remarketingu i profilowania.</li>
-      <li><strong>Dane rozgrywki:</strong> postępy, ukończone plansze i osiągnięcia — zapisywane lokalnie na urządzeniu.</li>
-      <li><strong>Dane zakupów:</strong> informacje o transakcjach w aplikacji (obsługiwane przez Google Play); otrzymujemy wyłącznie informację o statusie zakupu danego produktu, bez danych płatniczych.</li>
-      <li><strong>Dane analityczne (Firebase Analytics):</strong> zdarzenia dotyczące korzystania z gry, opisane poniżej.</li>
+      <li><strong>Technical data:</strong> device model, system version, language, region and a pseudonymous app installation identifier (Firebase app instance ID). The Advertising ID is not used by analytics, nor for ad personalization, remarketing or profiling.</li>
+      <li><strong>Gameplay data:</strong> progress, completed boards and achievements — stored locally on your device.</li>
+      <li><strong>Purchase data:</strong> information about in-app transactions (handled by Google Play); we receive only the purchase status of a given product, without any payment details.</li>
+      <li><strong>Analytics data (Firebase Analytics):</strong> events about how the game is used, described below.</li>
     </ul>
-    <h4>Zdarzenia analityczne</h4>
-    <p>Zbieramy wyłącznie zdarzenia techniczne i dotyczące rozgrywki, powiązane z pseudonimowym identyfikatorem instalacji. Nie zbieramy imion, nazwisk, adresów e-mail, treści wpisywanych przez użytkownika, dokładnej lokalizacji (GPS), kontaktów ani zdjęć. Zbierane zdarzenia:</p>
+    <h4>Analytics events</h4>
+    <p>We collect only technical and gameplay events, linked to a pseudonymous installation identifier. We do not collect first or last names, email addresses, text entered by the user, precise location (GPS), contacts or photos. The events we collect:</p>
     <ul>
-      <li><strong>Nawigacja:</strong> wejścia na ekrany aplikacji (wybór poziomu trudności, mapa kategorii, mapa plansz, plansza, sklep, osiągnięcia), czas zaangażowania i sesje.</li>
-      <li><strong>Rozgrywka:</strong> rozpoczęcie, ukończenie, zresetowanie i opuszczenie planszy (z przybliżonym procentem pomalowania i przedziałem czasu spędzonego na planszy), użycie podpowiedzi, odblokowane osiągnięcia; zdarzenia zawierają identyfikator planszy, kategorii i poziomu trudności.</li>
-      <li><strong>Reklamy:</strong> zdarzenia cyklu życia reklam (załadowanie, wyświetlenie, kliknięcie, zamknięcie, błąd, przyznanie nagrody za reklamę z nagrodą), z informacją o formacie reklamy (baner, pełnoekranowa, z nagrodą) i miejscu jej użycia; oferta reklamy z nagrodą (np. za podpowiedź lub odblokowanie kategorii) i jej wynik.</li>
-      <li><strong>Zakupy:</strong> rozpoczęcie i wynik zakupu w aplikacji (identyfikator produktu i status).</li>
-      <li><strong>Ustawienia:</strong> wybrany język i włączenie/wyłączenie muzyki.</li>
+      <li><strong>Navigation:</strong> visits to app screens (difficulty selection, category map, board map, board, store, achievements), engagement time and sessions.</li>
+      <li><strong>Gameplay:</strong> starting, completing, resetting and leaving a board (with the approximate percentage painted and a range of time spent on the board), use of hints, achievements unlocked; events include the board, category and difficulty identifiers.</li>
+      <li><strong>Ads:</strong> ad lifecycle events (loaded, shown, clicked, closed, error, reward granted for a rewarded ad), with the ad format (banner, interstitial, rewarded) and the place where it was used; a rewarded ad offer (e.g. for a hint or for unlocking a category) and its outcome.</li>
+      <li><strong>Purchases:</strong> the start and result of an in-app purchase (product identifier and status).</li>
+      <li><strong>Settings:</strong> the selected language and whether music is turned on or off.</li>
     </ul>
-    <p><strong>Zgoda:</strong> w regionach, w których wymaga tego prawo (np. UE/EOG), przy pierwszym uruchomieniu wyświetlamy okno zgody Google UMP. Zbieranie danych analitycznych włączamy <strong>wyłącznie po udzieleniu zgody</strong> na przechowywanie i dostęp do informacji na urządzeniu — jeśli odmówisz zgody (lub zamkniesz okno bez zgody), analityka pozostaje wyłączona. Poza regionami, w których zgoda nie jest wymagana, analityka działa na podstawie uzasadnionego interesu. Reklamy: po odmowie zgody mogą być nadal wyświetlane wyłącznie w ograniczonej, niespersonalizowanej postaci (bez profilowania i bez remarketingu); reklamy w aplikacji są zawsze niespersonalizowane. Do swojej decyzji możesz wrócić w każdej chwili: menu „⋮” w aplikacji → „Opcje prywatności” (o ile jest dostępne w Twoim regionie).</p>
-    <p>Analityka nie korzysta z identyfikatora reklamowego ani z sygnałów Google do personalizacji reklam (zgody ad_storage, ad_user_data i ad_personalization są wyłączone). Dane analityczne nie służą do reklamowego profilowania użytkowników.</p>
-<p><strong>Dane zbierane automatycznie przez SDK Firebase.</strong> Poza zdarzeniami wymienionymi powyżej SDK Firebase automatycznie rejestruje standardowe zdarzenia i dane techniczne, m.in. pierwsze uruchomienie, aktualizację aplikacji lub systemu, wersję aplikacji oraz model urządzenia i wersję systemu. Google może także wyznaczać przybliżone położenie (kraj, region) na podstawie adresu IP; nie jest to dokładna lokalizacja, a pełny adres IP nie jest przez nas przechowywany w raportach analitycznych.</p>
+    <p><strong>Consent:</strong> in regions where the law requires it (e.g. the EU/EEA), we show the Google UMP consent dialog on first launch. We turn on analytics data collection <strong>only after you consent</strong> to storing and accessing information on your device — if you refuse consent (or close the dialog without consenting), analytics stays off. Outside regions where consent is not required, analytics runs on the basis of legitimate interest. Ads: after you refuse consent, ads may still be shown, but only in a limited, non-personalized form (without profiling and without remarketing); ads in the app are always non-personalized. You can change your decision at any time: the “⋮” menu in the app → “Privacy options” (where available in your region).</p>
+    <p>Analytics does not use the advertising identifier or Google signals for ad personalization (the ad_storage, ad_user_data and ad_personalization consents are turned off). Analytics data is not used for advertising profiling of users.</p>
+<p><strong>Data collected automatically by the Firebase SDK.</strong> In addition to the events listed above, the Firebase SDK automatically records standard events and technical data, including the first launch, an app or system update, the app version, and the device model and system version. Google may also derive an approximate location (country, region) from the IP address; this is not a precise location, and we do not store the full IP address in analytics reports.</p>
   </div>
 
   <div class="legal-box">
-    <h3>3. Cel i podstawa przetwarzania</h3>
+    <h3>3. Purposes and legal basis for processing</h3>
     <ul>
-      <li>Świadczenie usług (art. 6 ust. 1 lit. b RODO).</li>
-      <li>Analityka i ulepszanie gier (art. 6 ust. 1 lit. a RODO — zgoda udzielana w oknie Google UMP, tam gdzie jest ono wymagane; poza takimi regionami art. 6 ust. 1 lit. f RODO — uzasadniony interes). W przypadku dziecka poniżej 16 lat zgoda na analitykę wymaga potwierdzenia przez rodzica lub opiekuna prawnego (art. 8 RODO); do czasu jej uzyskania — o ile zgoda jest wymagana — analityka nie jest włączana.</li>
-      <li>Reklamy (art. 6 ust. 1 lit. a RODO — zgoda, tam gdzie jest wymagana, oraz art. 6 ust. 1 lit. f RODO — uzasadniony interes w zakresie ograniczonych, niespersonalizowanych reklam wyświetlanych po odmowie zgody; wobec dzieci poniżej 16 lat wymagana jest zgoda rodzica lub opiekuna prawnego, zgodnie z art. 8 RODO).</li>
-      <li>Obowiązki prawno-podatkowe (art. 6 ust. 1 lit. c RODO).</li>
+      <li>Providing our services (Article 6(1)(b) GDPR).</li>
+      <li>Analytics and improving our games (Article 6(1)(a) GDPR — consent given in the Google UMP dialog, where it is required; outside such regions, Article 6(1)(f) GDPR — legitimate interest). For a child under 16, consent to analytics requires confirmation by a parent or legal guardian (Article 8 GDPR); until it is obtained — where consent is required — analytics is not turned on.</li>
+      <li>Ads (Article 6(1)(a) GDPR — consent, where required, and Article 6(1)(f) GDPR — legitimate interest for the limited, non-personalized ads shown after consent is refused; for children under 16, consent of a parent or legal guardian is required, in line with Article 8 GDPR).</li>
+      <li>Legal and tax obligations (Article 6(1)(c) GDPR).</li>
     </ul>
   </div>
 
   <div class="legal-box">
-    <h3>4. Odbiorcy danych</h3>
+    <h3>4. Recipients of data</h3>
     <ul>
-      <li><strong>Google LLC</strong> — Google Play Services, Firebase (Analytics), Google AdMob. Wobec użytkowników rozpoznanych jako dzieci reklamy AdMob są wyświetlane wyłącznie w trybie niespersonalizowanym (child-directed treatment), bez remarketingu i profilowania. Polityka prywatności Google: <a href="https://policies.google.com/privacy" rel="noopener">policies.google.com/privacy</a>.</li>
+      <li><strong>Google LLC</strong> — Google Play Services, Firebase (Analytics), Google AdMob. For users identified as children, AdMob ads are shown only in non-personalized mode (child-directed treatment), without remarketing or profiling. Google Privacy Policy: <a href="https://policies.google.com/privacy" rel="noopener">policies.google.com/privacy</a>.</li>
     </ul>
-    <p>Nie sprzedajemy danych osobowych użytkowników.</p>
-<p><strong>Przekazywanie danych poza EOG.</strong> Google LLC ma siedzibę w USA, dlatego dane przetwarzane przez Firebase i AdMob mogą być przekazywane do USA. Odbywa się to na podstawie decyzji Komisji Europejskiej o odpowiednim stopniu ochrony (EU-US Data Privacy Framework — o ile Google LLC jest uczestnikiem programu) lub standardowych klauzul umownych (art. 44–46 RODO).</p>
+    <p>We do not sell users' personal data.</p>
+<p><strong>Transfers outside the EEA.</strong> Google LLC is based in the USA, so data processed by Firebase and AdMob may be transferred to the USA. This takes place on the basis of a European Commission adequacy decision (the EU-US Data Privacy Framework — provided that Google LLC participates in the framework) or standard contractual clauses (Articles 44–46 GDPR).</p>
   </div>
 
   <div class="legal-box">
-    <h3>5. Dzieci i zgodność z Google Play Families Policy</h3>
-    <p>Nasze gry mogą być używane przez dzieci, dlatego stosujemy się do <strong>Google Play Families Policy</strong> oraz przepisów o ochronie danych osobowych dzieci wynikających z RODO.</p>
+    <h3>5. Children and compliance with the Google Play Families Policy</h3>
+    <p>Our games may be used by children, so we comply with the <strong>Google Play Families Policy</strong> and with the rules on protecting children's personal data under the GDPR.</p>
     <ul>
-      <li>Zgodnie z art. 8 RODO oraz polskimi przepisami wdrażającymi RODO, przetwarzanie danych osobowych dziecka poniżej <strong>16 roku życia</strong> w oparciu o zgodę (np. na reklamy spersonalizowane) wymaga zgody rodzica lub opiekuna prawnego.</li>
-      <li>Reklamy wyświetlane dzieciom są zawsze niespersonalizowane — nie prowadzimy wobec nich remarketingu ani profilowania behawioralnego.</li>
-      <li>Nie zbieramy od dzieci danych wykraczających poza to, co niezbędne do działania gry — bez precyzyjnej geolokalizacji, bez funkcji czatu ani innych funkcji społecznościowych.</li>
-      <li>Klasyfikacja treści i grup wiekowych naszych gier w Google Play jest zgodna z kwestionariuszem IARC (International Age Rating Coalition).</li>
+      <li>Under Article 8 GDPR and the Polish provisions implementing the GDPR, processing the personal data of a child under <strong>16 years of age</strong> on the basis of consent (e.g. for personalized ads) requires the consent of a parent or legal guardian.</li>
+      <li>Ads shown to children are always non-personalized — we do not carry out remarketing or behavioral profiling of children.</li>
+      <li>We do not collect from children any data beyond what is necessary for the game to work — no precise geolocation, no chat or other social features.</li>
+      <li>The content and age ratings of our games on Google Play follow the IARC (International Age Rating Coalition) questionnaire.</li>
     </ul>
-    <p>Rodzice i opiekunowie mogą zgłaszać pytania lub żądania dotyczące danych dziecka na <a href="mailto:contact@pixelcorpstudio.com">contact@pixelcorpstudio.com</a>.</p>
+    <p>Parents and guardians can send questions or requests about a child's data to <a href="mailto:contact@pixelcorpstudio.com">contact@pixelcorpstudio.com</a>.</p>
   </div>
 
   <div class="legal-box">
-    <h3>6. Twoje prawa</h3>
+    <h3>6. Your rights</h3>
     <ul>
-      <li>Dostępu do danych, ich sprostowania i usunięcia.</li>
-      <li>Ograniczenia i sprzeciwu wobec przetwarzania.</li>
-      <li>Przenoszenia danych.</li>
-      <li>Wycofania zgody w dowolnym momencie — w aplikacji: menu „⋮” → „Opcje prywatności” (o ile jest dostępne w Twoim regionie), lub e-mailem; wycofanie nie wpływa na zgodność z prawem przetwarzania sprzed wycofania.</li>
-      <li>Skargi do Prezesa UODO.</li>
+      <li>Access to your data, and its rectification and erasure.</li>
+      <li>Restriction of processing and objection to processing.</li>
+      <li>Data portability.</li>
+      <li>Withdrawal of consent at any time — in the app: the “⋮” menu → “Privacy options” (where available in your region), or by email; withdrawal does not affect the lawfulness of processing carried out before it.</li>
+      <li>Lodging a complaint with the President of the Personal Data Protection Office (UODO), the Polish supervisory authority.</li>
     </ul>
-    <p>Kontakt w sprawach RODO: <a href="mailto:contact@pixelcorpstudio.com">contact@pixelcorpstudio.com</a>.</p>
+    <p>Contact for GDPR matters: <a href="mailto:contact@pixelcorpstudio.com">contact@pixelcorpstudio.com</a>.</p>
   </div>
 
   <div class="legal-box">
-    <h3>7. Bezpieczeństwo i retencja</h3>
-    <p>Dane są szyfrowane (TLS), a dostęp mają wyłącznie upoważnione osoby. Dane przechowujemy przez okres niezbędny do realizacji celów, nie dłużej niż 5 lat od ostatniej aktywności; zdarzenia analityczne w Firebase są przechowywane przez okres retencji ustawiony w konsoli Firebase (nie dłużej niż 14 miesięcy), po czym są automatycznie usuwane.</p>
+    <h3>7. Security and retention</h3>
+    <p>Data is encrypted (TLS), and only authorized persons have access to it. We keep data for as long as necessary to achieve the purposes, and no longer than 5 years from the last activity; analytics events in Firebase are kept for the retention period set in the Firebase console (no longer than 14 months), after which they are deleted automatically.</p>
   </div>
 
   <div class="legal-box">
-    <h3>8. Zmiany polityki</h3>
-    <p>O istotnych zmianach poinformujemy w aplikacji lub na tej stronie.</p>
+    <h3>8. Changes to this policy</h3>
+    <p>We will tell you about significant changes in the app or on this page.</p>
   </div>
 </section>
 
 <section id="terms">
-  <h2>Regulamin usługi</h2>
-  <p class="lead">Warunki korzystania z gier Pixel Corp Studio.</p>
+  <h2>Terms of Service</h2>
+  <p class="lead">Terms of use for Pixel Corp Studio games.</p>
 
   <div class="legal-box">
-    <h3>1. Postanowienia ogólne</h3>
-    <p>Usługi gier mobilnych świadczy <strong>Marcin Korycki</strong>, prowadzący jednoosobową działalność gospodarczą pod firmą <strong>Marcin Korycki Usługi Programistyczne</strong> (dalej „Usługodawca"), działający pod marką <strong>Pixel Corp Studio</strong>. Korzystanie z gier oznacza akceptację niniejszego Regulaminu.</p>
+    <h3>1. General provisions</h3>
+    <p>Mobile game services are provided by <strong>Marcin Korycki</strong>, running a sole proprietorship under the business name <strong>Marcin Korycki Usługi Programistyczne</strong> (the “Service Provider”), operating under the brand <strong>Pixel Corp Studio</strong>. By using the games you accept these Terms.</p>
   </div>
 
   <div class="legal-box">
-    <h3>2. Licencja</h3>
-    <p>Udzielamy niewyłącznej, nieprzenoszalnej licencji na korzystanie z gry w celach osobistych, niekomercyjnych.</p>
+    <h3>2. Licence</h3>
+    <p>We grant a non-exclusive, non-transferable licence to use the game for personal, non-commercial purposes.</p>
   </div>
 
   <div class="legal-box">
-    <h3>3. Zakazane działania</h3>
+    <h3>3. Prohibited activities</h3>
     <ul>
-      <li>Modyfikowanie, dekompilowanie gry.</li>
-      <li>Używanie botów i exploitów oraz nieautoryzowanych modyfikacji gry. Funkcje oferowane w grze (w tym płatny „Tryb Cheat”) są dozwolone.</li>
-      <li>Obrót kontami i wirtualnymi przedmiotami poza grą.</li>
+      <li>Modifying or decompiling the game.</li>
+      <li>Using bots, exploits and unauthorized modifications of the game. Features offered within the game (including the paid “Cheat Mode”) are permitted.</li>
+      <li>Trading accounts and virtual items outside the game.</li>
     </ul>
   </div>
 
   <div class="legal-box">
-    <h3>4. Zakupy w aplikacji</h3>
-    <p>Zakupy obsługiwane są przez Google Play i podlegają jego regulaminowi.</p>
-    <p>Konsument ma prawo odstąpić od umowy zawartej na odległość w terminie 14 dni, jednak w przypadku treści cyfrowych dostarczanych w grze (np. płatnych funkcji lub pakietów podpowiedzi) prawo to wygasa z chwilą rozpoczęcia ich dostarczania, jeżeli konsument wyraził na to zgodę i został poinformowany o utracie prawa odstąpienia (art. 38 pkt 13 ustawy o prawach konsumenta). Zasady zwrotów w Google Play określa jego regulamin.</p>
+    <h3>4. In-app purchases</h3>
+    <p>Purchases are handled by Google Play and are subject to its terms.</p>
+    <p>A consumer has the right to withdraw from a distance contract within 14 days. However, for digital content supplied in the game (e.g. paid features or hint packs), this right expires once supply of that content begins, provided the consumer has consented to it and has been informed that the right of withdrawal will be lost (Article 38(13) of the Polish Consumer Rights Act). Refund rules on Google Play are set by its terms.</p>
   </div>
 
   <div class="legal-box">
-    <h3>5. Odpowiedzialność</h3>
-    <p>Gra dostarczana jest „tak jak jest". Usługodawca nie odpowiada za utratę danych ani przerwy w działaniu.</p>
+    <h3>5. Liability</h3>
+    <p>The game is provided “as is”. The Service Provider is not liable for data loss or interruptions in operation.</p>
   </div>
 
   <div class="legal-box">
-    <h3>6. Reklamacje</h3>
-    <p>Reklamacje dotyczące działania gry lub zakupów w aplikacji można składać e-mailem na adres <a href="mailto:contact@pixelcorpstudio.com">contact@pixelcorpstudio.com</a>, podając opis problemu, model urządzenia i wersję aplikacji. Odpowiadamy w terminie 14 dni od otrzymania reklamacji. Przepisy o ochronie konsumentów, w tym o rękojmi za treści cyfrowe, pozostają nienaruszone.</p>
+    <h3>6. Complaints</h3>
+    <p>Complaints about how the game works or about in-app purchases can be sent by email to <a href="mailto:contact@pixelcorpstudio.com">contact@pixelcorpstudio.com</a>, with a description of the problem, the device model and the app version. We reply within 14 days of receiving the complaint. Consumer protection rules, including the statutory warranty for digital content, remain unaffected.</p>
   </div>
 
   <div class="legal-box">
-    <h3>7. Prawo właściwe</h3>
-    <p>Regulamin podlega prawu polskiemu. Spory rozstrzygają sądy właściwe dla miejsca prowadzenia działalności przez Usługodawcę.</p>
+    <h3>7. Governing law</h3>
+    <p>These Terms are governed by Polish law. Disputes are resolved by the courts competent for the Service Provider's place of business.</p>
   </div>
 </section>
 
 <section id="contact">
-  <h2>Kontakt</h2>
-  <p class="lead">Współpraca, wsparcie techniczne, reklamacje — jesteśmy do dyspozycji.</p>
+  <h2>Contact</h2>
+  <p class="lead">Partnerships, technical support, complaints — we're here to help.</p>
   <div class="contact-grid">
     <div class="contact-card">
       <div class="icon">✉️</div>
-      <h4>Kontakt ogólny</h4>
+      <h4>General contact</h4>
       <a href="mailto:contact@pixelcorpstudio.com">contact@pixelcorpstudio.com</a>
     </div>
     <div class="contact-card">
       <div class="icon">🛠️</div>
-      <h4>Wsparcie techniczne</h4>
+      <h4>Technical support</h4>
       <a href="mailto:contact@pixelcorpstudio.com">contact@pixelcorpstudio.com</a>
     </div>
     <div class="contact-card">
       <div class="icon">🔒</div>
-      <h4>Prywatność / RODO</h4>
+      <h4>Privacy / GDPR</h4>
       <a href="mailto:contact@pixelcorpstudio.com">contact@pixelcorpstudio.com</a>
     </div>
     <div class="contact-card">
       <div class="icon">💼</div>
-      <h4>Współpraca / wydawcy</h4>
+      <h4>Partnerships / publishers</h4>
       <a href="mailto:contact@pixelcorpstudio.com">contact@pixelcorpstudio.com</a>
     </div>
   </div>
@@ -320,21 +240,21 @@
 
 <footer>
   <div class="flogo">PIXEL <span>CORP</span> STUDIO</div>
-  <p>Marka gier mobilnych prowadzona przez Marcin Korycki Usługi Programistyczne · Łódź, Polska</p>
+  <p>A mobile game brand run by Marcin Korycki Usługi Programistyczne · Łódź, Poland</p>
   <div class="legal-info">
     <strong>Marcin Korycki Usługi Programistyczne</strong><br>
     ul. Drewnowska 51/66, 91-002 Łódź<br>
     NIP: 7272820040 · REGON: 368656876
   </div>
   <div class="links">
-    <a href="#about">O nas</a>
-    <a href="#games">Gry</a>
-    <a href="#privacy">Polityka prywatności</a>
-    <a href="#terms">Regulamin</a>
-    <a href="#contact">Kontakt</a>
+    <a href="#about">About</a>
+    <a href="#games">Games</a>
+    <a href="#privacy">Privacy Policy</a>
+    <a href="#terms">Terms</a>
+    <a href="#contact">Contact</a>
   </div>
-  <p>© 2026 Marcin Korycki Usługi Programistyczne · Pixel Corp Studio. Wszelkie prawa zastrzeżone.</p>
-  <p style="margin-top:8px;font-size:12px;opacity:.6">Google Play i logo Google Play są znakami towarowymi Google LLC.</p>
+  <p>© 2026 Marcin Korycki Usługi Programistyczne · Pixel Corp Studio. All rights reserved.</p>
+  <p style="margin-top:8px;font-size:12px;opacity:.6">Google Play and the Google Play logo are trademarks of Google LLC.</p>
 </footer>
 
 </body>
