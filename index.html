@@ -17,6 +17,7 @@
 <meta name="description" content="Pixel Corp Studio — a mobile game brand run by Marcin Korycki Usługi Programistyczne. First game: PixelDraw: Color by Number for Android." />
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='50' height='50' fill='%2300F0FF'/><rect x='50' y='50' width='50' height='50' fill='%23FF00E5'/></svg>" />
 <link rel="stylesheet" href="/style.css" />
+<script>if(location.hash==='#privacy')location.replace('/privacy/'+'pixeldraw/');</script>
 <script>
 (function(){
   var KEY='pcs-lang';
@@ -41,8 +42,7 @@
   <ul>
     <li><a href="#about">About</a></li>
     <li><a href="#games">Games</a></li>
-    <li><a href="#privacy">Privacy</a></li>
-    <li><a href="/privacy/">Privacy by game</a></li>
+    <li><a href="/privacy/">Privacy</a></li>
     <li><a href="#terms">Terms</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -110,96 +110,6 @@
         <img src="/img/lumena-dolina.webp" alt="The Moonlit Valley scene in Lumena" width="864" height="540" loading="lazy">
       </div>
     </div>
-  </div>
-</section>
-
-<section id="privacy">
-  <h2>Privacy Policy</h2>
-  <p class="lead">Last updated: 3 October 2026 · This policy applies to <strong>PixelDraw</strong>. Looking for another game? See <a href="/privacy/">privacy policies by game</a>.</p>
-
-  <div class="legal-box">
-    <h3>1. Data controller</h3>
-    <p>The controller of personal data within the meaning of the GDPR is:</p>
-    <p><strong>Marcin Korycki</strong>, running a sole proprietorship under the business name <strong>Marcin Korycki Usługi Programistyczne</strong><br>
-    ul. Drewnowska 51/66, 91-002 Łódź, Poland<br>
-    NIP: 7272820040 · REGON: 368656876<br>
-    Email: <a href="mailto:contact@pixelcorpstudio.com">contact@pixelcorpstudio.com</a></p>
-    <p>The business operates the trade brand <strong>Pixel Corp Studio</strong>, under which it publishes mobile games on Google Play.</p>
-  </div>
-
-  <div class="legal-box">
-    <h3>2. What data we collect</h3>
-    <ul>
-      <li><strong>Technical data:</strong> device model, system version, language, region and a pseudonymous app installation identifier (Firebase app instance ID). The Advertising ID is not used by analytics, nor for ad personalization, remarketing or profiling.</li>
-      <li><strong>Gameplay data:</strong> progress, completed boards and achievements — stored locally on your device.</li>
-      <li><strong>Purchase data:</strong> information about in-app transactions (handled by Google Play); we receive only the purchase status of a given product, without any payment details.</li>
-      <li><strong>Analytics data (Firebase Analytics):</strong> events about how the game is used, described below.</li>
-    </ul>
-    <h4>Analytics events</h4>
-    <p>We collect only technical and gameplay events, linked to a pseudonymous installation identifier. We do not collect first or last names, email addresses, text entered by the user, precise location (GPS), contacts or photos. The events we collect:</p>
-    <ul>
-      <li><strong>Navigation:</strong> visits to app screens (difficulty selection, category map, board map, board, store, achievements), engagement time and sessions.</li>
-      <li><strong>Gameplay:</strong> starting, completing, resetting and leaving a board (with the approximate percentage painted and a range of time spent on the board), use of hints, achievements unlocked; events include the board, category and difficulty identifiers.</li>
-      <li><strong>Ads:</strong> ad lifecycle events (loaded, shown, clicked, closed, error, reward granted for a rewarded ad), with the ad format (banner, interstitial, rewarded) and the place where it was used; a rewarded ad offer (e.g. for a hint or for unlocking a category) and its outcome.</li>
-      <li><strong>Purchases:</strong> the start and result of an in-app purchase (product identifier and status).</li>
-      <li><strong>Settings:</strong> the selected language and whether music is turned on or off.</li>
-    </ul>
-    <p><strong>Consent:</strong> in regions where the law requires it (e.g. the EU/EEA), we show the Google UMP consent dialog on first launch. We turn on analytics data collection <strong>only after you consent</strong> to storing and accessing information on your device — if you refuse consent (or close the dialog without consenting), analytics stays off. Outside regions where consent is not required, analytics runs on the basis of legitimate interest. Ads: after you refuse consent, ads may still be shown, but only in a limited, non-personalized form (without profiling and without remarketing); ads in the app are always non-personalized. You can change your decision at any time: the “⋮” menu in the app → “Privacy options” (where available in your region).</p>
-    <p>Analytics does not use the advertising identifier or Google signals for ad personalization (the ad_storage, ad_user_data and ad_personalization consents are turned off). Analytics data is not used for advertising profiling of users.</p>
-<p><strong>Data collected automatically by the Firebase SDK.</strong> In addition to the events listed above, the Firebase SDK automatically records standard events and technical data, including the first launch, an app or system update, the app version, and the device model and system version. Google may also derive an approximate location (country, region) from the IP address; this is not a precise location, and we do not store the full IP address in analytics reports.</p>
-  </div>
-
-  <div class="legal-box">
-    <h3>3. Purposes and legal basis for processing</h3>
-    <ul>
-      <li>Providing our services (Article 6(1)(b) GDPR).</li>
-      <li>Analytics and improving our games (Article 6(1)(a) GDPR — consent given in the Google UMP dialog, where it is required; outside such regions, Article 6(1)(f) GDPR — legitimate interest). For a child under 16, consent to analytics requires confirmation by a parent or legal guardian (Article 8 GDPR); until it is obtained — where consent is required — analytics is not turned on.</li>
-      <li>Ads (Article 6(1)(a) GDPR — consent, where required, and Article 6(1)(f) GDPR — legitimate interest for the limited, non-personalized ads shown after consent is refused; for children under 16, consent of a parent or legal guardian is required, in line with Article 8 GDPR).</li>
-      <li>Legal and tax obligations (Article 6(1)(c) GDPR).</li>
-    </ul>
-  </div>
-
-  <div class="legal-box">
-    <h3>4. Recipients of data</h3>
-    <ul>
-      <li><strong>Google LLC</strong> — Google Play Services, Firebase (Analytics), Google AdMob. For users identified as children, AdMob ads are shown only in non-personalized mode (child-directed treatment), without remarketing or profiling. Google Privacy Policy: <a href="https://policies.google.com/privacy" rel="noopener">policies.google.com/privacy</a>.</li>
-    </ul>
-    <p>We do not sell users' personal data.</p>
-<p><strong>Transfers outside the EEA.</strong> Google LLC is based in the USA, so data processed by Firebase and AdMob may be transferred to the USA. This takes place on the basis of a European Commission adequacy decision (the EU-US Data Privacy Framework — provided that Google LLC participates in the framework) or standard contractual clauses (Articles 44–46 GDPR).</p>
-  </div>
-
-  <div class="legal-box">
-    <h3>5. Children and compliance with the Google Play Families Policy</h3>
-    <p>Our games may be used by children, so we comply with the <strong>Google Play Families Policy</strong> and with the rules on protecting children's personal data under the GDPR.</p>
-    <ul>
-      <li>Under Article 8 GDPR and the Polish provisions implementing the GDPR, processing the personal data of a child under <strong>16 years of age</strong> on the basis of consent (e.g. for personalized ads) requires the consent of a parent or legal guardian.</li>
-      <li>Ads shown to children are always non-personalized — we do not carry out remarketing or behavioral profiling of children.</li>
-      <li>We do not collect from children any data beyond what is necessary for the game to work — no precise geolocation, no chat or other social features.</li>
-      <li>The content and age ratings of our games on Google Play follow the IARC (International Age Rating Coalition) questionnaire.</li>
-    </ul>
-    <p>Parents and guardians can send questions or requests about a child's data to <a href="mailto:contact@pixelcorpstudio.com">contact@pixelcorpstudio.com</a>.</p>
-  </div>
-
-  <div class="legal-box">
-    <h3>6. Your rights</h3>
-    <ul>
-      <li>Access to your data, and its rectification and erasure.</li>
-      <li>Restriction of processing and objection to processing.</li>
-      <li>Data portability.</li>
-      <li>Withdrawal of consent at any time — in the app: the “⋮” menu → “Privacy options” (where available in your region), or by email; withdrawal does not affect the lawfulness of processing carried out before it.</li>
-      <li>Lodging a complaint with the President of the Personal Data Protection Office (UODO), the Polish supervisory authority.</li>
-    </ul>
-    <p>Contact for GDPR matters: <a href="mailto:contact@pixelcorpstudio.com">contact@pixelcorpstudio.com</a>.</p>
-  </div>
-
-  <div class="legal-box">
-    <h3>7. Security and retention</h3>
-    <p>Data is encrypted (TLS), and only authorized persons have access to it. We keep data for as long as necessary to achieve the purposes, and no longer than 5 years from the last activity; analytics events in Firebase are kept for the retention period set in the Firebase console (no longer than 14 months), after which they are deleted automatically.</p>
-  </div>
-
-  <div class="legal-box">
-    <h3>8. Changes to this policy</h3>
-    <p>We will tell you about significant changes in the app or on this page.</p>
   </div>
 </section>
 
@@ -286,8 +196,7 @@
   <div class="links">
     <a href="#about">About</a>
     <a href="#games">Games</a>
-    <a href="#privacy">Privacy Policy</a>
-    <a href="/privacy/">Privacy by game</a>
+    <a href="/privacy/">Privacy Policy</a>
     <a href="#terms">Terms</a>
     <a href="#contact">Contact</a>
   </div>
