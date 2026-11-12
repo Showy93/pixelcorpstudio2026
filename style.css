@@ -104,3 +104,12 @@
   .gal img{width:100%;height:auto;aspect-ratio:7/5;object-fit:cover;border-radius:14px;border:1px solid var(--border);display:block}
   .gal figcaption{font-size:13px;color:var(--muted);margin-top:6px}
   @media(max-width:760px){.nav-right{gap:0}.feature{grid-template-columns:1fr;padding:24px}.phones{--pw:140px;height:330px}}
+
+  .feature.lumena{background:radial-gradient(900px 400px at 15% 50%,rgba(0,240,255,.14),transparent 60%),radial-gradient(700px 400px at 100% 0%,rgba(255,210,63,.12),transparent 60%),var(--bg2);margin-top:28px}
+  .feature.lumena .ico{background:#05050A}
+  .soon{display:inline-block;padding:14px 26px;border-radius:10px;font-weight:700;font-size:15px;border:2px dashed rgba(255,0,229,.45);color:var(--magenta);background:rgba(255,0,229,.08)}
+  .feature.lumena .links2{margin-top:14px;font-size:13.5px}
+  .shots{display:grid;gap:12px}
+  .shots img{width:100%;height:auto;aspect-ratio:8/5;object-fit:cover;border-radius:14px;border:1px solid var(--border);display:block;box-shadow:0 14px 36px rgba(0,0,0,.5)}
+  .shots .row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media(max-width:760px){.shots .row2{grid-template-columns:1fr}}
